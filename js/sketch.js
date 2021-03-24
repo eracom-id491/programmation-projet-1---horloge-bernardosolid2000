@@ -2,7 +2,7 @@ let customFont; // Ne pas toucher à cette ligne
 
 // Ne pas toucher au bloc ci-dessous
 function preload() {
-  customFont = loadFont("../assets/Suisse Bold.otf");
+  customFont = loadFont("assets/SuisseBold.otf");
 }
 // ---------------------------------- s//
 
@@ -13,43 +13,39 @@ function setup() {
 
 function draw() {
   background(220);
+  strokeWeight(1);
+  stroke(0);
+  fill(255);
+  textSize(15);
+  text('HOUR', width / 2, height / 2);
 
-strokeWeight(1);
-stroke(0);
-fill(255);
-textSize(15);
-text('HOUR', width/2, height/2);
+  strokeWeight(0);
+  fill(255, 0, 0);
+  circle(width / 2, height / 2 - 30, 20);
 
-strokeWeight(0);
-fill(255,0,0);
-circle( width/2, height/2-30, 20);
+  strokeWeight(1);
+  stroke(0);
+  fill(255);
+  textSize(15);
+  text('MINUTE', width / 2, height / 2 + 65);
 
+  strokeWeight(0);
+  fill(0, 255, 0);
+  circle(width / 2, height / 2 + 35, 20);
 
-strokeWeight(1);
-stroke(0);
-fill(255);
-textSize(15);
-text('MINUTE', width/2, height/2+65);
+  strokeWeight(1);
+  stroke(0);
+  fill(255);
+  textSize(15);
+  text('SECOND', width / 2, height / 2 + 130);
 
-strokeWeight(0);
-fill(0,255,0);
-circle(width/2, height/2+35, 20);
+  strokeWeight(0);
+  fill(0, 0, 255);
+  circle(width / 2, height / 2 + 100, 20);
 
-
-strokeWeight(1);
-stroke(0);
-fill(255);
-textSize(15);
-text('SECOND', width/2, height/2+130);
-
-strokeWeight(0);
-fill(0,0,255);
-circle(width/2, height/2+100, 20);
-  
   showTime(); // Ne pas toucher à cette ligne
 
   linhes();
- 
 }
 
 function linhes()
